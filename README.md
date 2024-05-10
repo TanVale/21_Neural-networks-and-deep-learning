@@ -17,13 +17,14 @@ IS_SUCCESSFUL—Was the money used effectively
 # Results
 ![accuracy image](https://github.com/TanVale/21_Neural-networks-and-deep-learning/blob/main/Results.png)
 # Data Preprocessing
-What variable(s) were the target(s) for the model? - The target variable is named "IS_SUCCESSFUL".
-What variable(s) were the features for the model? - The features were derived from all other columns; I removed columns that were not useful for the model. I then used the "get_dummies()" method to expand some columns.
-What variable(s) should be removed from the input data because they are neither targets nor features? - The four columns removed were: "EIN","NAME","STATUS","SPECIAL_CONSIDERATIONS" 
+- What variable(s) were the target(s) for the model? - The target variable is named "IS_SUCCESSFUL".
+- What variable(s) were the features for the model? - The features were derived from all other columns; I removed columns that were not useful for the model. I then used the "get_dummies()" method to expand some columns.
+- What variable(s) were removed from the input data because they are neither targets nor features? - The four columns removed were: "EIN","NAME","STATUS","SPECIAL_CONSIDERATIONS" 
 
 # Compiling, Training, and Evaluating the Model
-Were you able to achieve the target model performance? - I was able to get the nodel to a 0.79 accuracy but adding three hidden layers. Initially I had only 3 layers with activation relu, softmax and sigmoid. To improve accuracy I added another layer and changed the activations. The first layer was still relu but I changed the next 3 layer's activations to sigmoid.
+- Were you able to achieve the target model performance? - I was able to get the nodel to a 0.79 accuracy but adding three hidden layers. Initially I had only 3 layers with activation relu, softmax and sigmoid. To improve accuracy I added another layer and changed the activations. The first layer was still relu but I changed the next 3 layer's activations to sigmoid.
 
-What steps did you take in your attempts to increase model performance? - I binned the "Name" column and used "Sigmoid" as the activation for the second, third and fourth layer. I also unbinned "income_amt" to improve accuracy. 
+- What steps did you take in your attempts to increase model performance? - I binned the "Name" column and used "Sigmoid" as the activation for the second, third and fourth layer. I also unbinned "income_amt" to improve accuracy. 
 
-Summary: I was able to achieve an accuracy of 79% by adding another layer, changing the activation and binning/ unbinning some columns as well as dropping columns that did not help the model.
+# Summary
+I was able to achieve an accuracy of 79% by adding another layer, changing the activation and binning/ unbinning some columns as well as dropping columns that did not help the model.
