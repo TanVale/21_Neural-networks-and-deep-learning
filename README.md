@@ -17,6 +17,7 @@ The goal of this exercise is to attempt to create a model that can predict wheth
 The ultimate goal was to create an algorithm using machine learning that would show an accuracy above 75%.
 
 # Results
+Achieved an accuracy of 79%
 ![accuracy image](https://github.com/TanVale/21_Neural-networks-and-deep-learning/blob/main/Results.png)
 # Data Preprocessing
 - What variable(s) were the target(s) for the model? - The target variable is named "IS_SUCCESSFUL".
