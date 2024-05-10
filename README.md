@@ -18,7 +18,9 @@ The ultimate goal was to create an algorithm using machine learning that would s
 
 # Results
 Achieved an accuracy of 79%
+
 ![accuracy image](https://github.com/TanVale/21_Neural-networks-and-deep-learning/blob/main/Results.png)
+
 # Data Preprocessing
 - What variable(s) were the target(s) for the model? - The target variable is named "IS_SUCCESSFUL".
 - What variable(s) were the features for the model? - The features were derived from all other columns; I removed columns that were not useful for the model. I then used the "get_dummies()" method to expand some columns.
