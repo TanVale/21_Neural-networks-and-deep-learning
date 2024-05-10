@@ -1,20 +1,29 @@
 # 21_Neural-networks-and-deep-learning
-For this part of the assignment, you’ll write a report on the performance of the deep learning model you created for Alphabet Soup.
 
-The report should contain the following:
+#Overview of the analysis
+The goal of this exercise is to attempt to create a model that can predict whether or not a venture will succeed. The nonprofit foundation Alphabet Soup wants a tool that can help it select the applicants for funding with the best chance of success in their ventures. A CSV containing more than 34,000 organizations that have received funding from Alphabet Soup over the years was provided. Within this dataset are a number of columns that capture metadata about each organization, such as:
+EIN and NAME—Identification columns
+APPLICATION_TYPE—Alphabet Soup application type
+AFFILIATION—Affiliated sector of industry
+CLASSIFICATION—Government organization classification
+USE_CASE—Use case for funding
+ORGANIZATION—Organization type
+STATUS—Active status
+INCOME_AMT—Income classification
+SPECIAL_CONSIDERATIONS—Special considerations for application
+ASK_AMT—Funding amount requested
+IS_SUCCESSFUL—Was the money used effectively
 
-Overview of the analysis: Explain the purpose of this analysis.
+#Results
+![accuracy image]()
+#Data Preprocessing
+What variable(s) were the target(s) for the model? - The target variable is named "IS_SUCCESSFUL".
+What variable(s) were the features for the model? - The features were derived from all other columns; I removed columns that were not useful for the model. I then used the "get_dummies()" method to expand some columns.
+What variable(s) should be removed from the input data because they are neither targets nor features? - The four columns removed were: "EIN","NAME","STATUS","SPECIAL_CONSIDERATIONS" 
 
-Results: Using bulleted lists and images to support your answers, address the following questions:
+#Compiling, Training, and Evaluating the Model
+Were you able to achieve the target model performance? - I was able to get the nodel to a 0.79 accuracy but adding three hidden layers. Initially I had only 3 layers with activation relu, softmax and sigmoid. To improve accuracy I added another layer and changed the activations. The first layer was still relu but I changed the next 3 layer's activations to sigmoid.
 
-Data Preprocessing
+What steps did you take in your attempts to increase model performance? - I binned the "Name" column and used "Sigmoid" as the activation for the second, third and fourth layer. I also unbinned "income_amt" to improve accuracy. 
 
-What variable(s) are the target(s) for your model?
-What variable(s) are the features for your model?
-What variable(s) should be removed from the input data because they are neither targets nor features?
-Compiling, Training, and Evaluating the Model
-
-How many neurons, layers, and activation functions did you select for your neural network model, and why?
-Were you able to achieve the target model performance?
-What steps did you take in your attempts to increase model performance?
-Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
+Summary: I was able to achieve an accuracy of 79% by adding another layer, changing the activation and binning/ unbinning some columns as well as dropping columns that did not help the model.
